@@ -1,4 +1,8 @@
 # terminote
+...
+Todo app built with vue.js and state management handled through vuex.
+The todo data is dummy data from jsonplaceholder called via the axios library.
+You can add custom todos and then delete them.
 
 ## Project setup
 ```
