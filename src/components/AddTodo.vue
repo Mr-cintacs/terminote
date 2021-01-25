@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template>
   <div class='add-todo-container'>
       <h3 id="heading" >Add Todo</h3>
@@ -62,68 +61,4 @@ input[type="submit"] {
     /* transition: border 1s ease-in-out; */
 }
 
-=======
-<template>
-  <div class='add-todo-container'>
-      <h3 id="heading" >Add Todo</h3>
-      <div class="add">
-          <form v-on:submit="onSubmit">
-              <input type="text" v-model="title" placeholder="Add Todo..">
-              <input type="submit" value="submit">
-          </form>
-      </div>
-  </div>
-</template>
-
-<script>
-import { mapActions } from 'vuex';
-export default {
-    name: 'AddTodo',
-    data() {
-        return{
-            title: ''
-        }
-    },
-    methods:{
-        ...mapActions(['addTodo']),
-        onSubmit(e) {
-            e.preventDefault();
-            this.addTodo(this.title);
-        }
-    }
-
-}
-</script>
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-.add-todo-container{
-    margin-left:4em;
-}
-#heading{
-    font-family: 'Roboto', sans-serif;
-    color:#FFFCF7;
-    font-size:1.8rem;
-}
-input[type="text"] {
-    border:none;
-    padding:1em;
-    background-color:#E4F0D0;
-    border-radius:20px;
-}
-input[type="submit"] {
-    border:none;
-    margin-left:0.5em;
-    padding:0.2em;
-    border-bottom: 5px #e4f0d0 solid;
-    color:#E4F0D0;
-    font-weight:bolder;
-    font-size:2rem;
-    cursor:pointer;
-    /* transition: border 1s ease-in-out; */
-}
-
->>>>>>> ba4cf51318860832f2f1be81a867aae0ae63cd57
 </style>
