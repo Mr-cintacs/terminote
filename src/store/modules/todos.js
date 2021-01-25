@@ -18,7 +18,7 @@ const actions = {
     },
     
     async deleteTodo({ commit }, id) {
-       axios.delete(`https://jsonplaceholder.typicode.com/users/1/todos/${id}`);
+    //    axios.delete(`https://jsonplaceholder.typicode.com/users/1/todos/${id}`);
         commit('removeTodo', id);
     }
 

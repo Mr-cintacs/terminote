@@ -7,7 +7,7 @@
     </div>
     <div class="main-content-container">
         <div class="todos-container">
-            <div draggable="true" v-for="todo in allTodos" v-bind:key="todo.id" class="todo" v-on:dragstart="dragStart(todo.id)">
+            <div draggable="true" v-for="todo in allTodos" v-bind:key="todo.id" class="todo" v-on:dragstart="dragStart(todo.id)" :data-id="todo.id">
                 {{ todo.title }}
                 <img src="../assets/delete.png" id="del-btn" v-on:click="deleteTodo(todo.id)">
             </div>
@@ -29,11 +29,13 @@ export default {
         AddTodo,
         DeleteTodo
     },
+
     data() {
         return {
             currentTodo:""
         }
     },
+
     computed: mapGetters(['allTodos']),
     methods: {
         ...mapActions(['fetchTodos', 'deleteTodo']),
