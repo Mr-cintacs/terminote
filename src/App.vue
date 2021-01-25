@@ -22,8 +22,11 @@ export default {
   margin:0;
   padding:0;
   box-sizing:border-box;
+<<<<<<< HEAD
 }
 body{
+=======
+>>>>>>> ba4cf51318860832f2f1be81a867aae0ae63cd57
   background-color:#A1B5D8;
 }
 .container{
